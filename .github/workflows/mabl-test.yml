@@ -1,0 +1,26 @@
+name: Run mabl Plan on Commit
+
+on:
+  push:
+    branches:
+      - dev  # Change this if needed
+  workflow_dispatch: # Allows manual execution
+
+jobs:
+  run-mabl-plan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Functional test deployment
+        id: mabl-test-deployment
+        uses: mablhq/mabl-github-action@v1
+        env:
+            # Use a "CI/CD integration" type of mabl API key
+            MABL_API_KEY: ${{ secrets.MABL_API_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            application-id: FJdjowTRWDa9KOeJJuLRzA-a
+            environment-id: ykwgA7IwTaQPm2i7ArvGg-e
