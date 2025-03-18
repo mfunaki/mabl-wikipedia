@@ -23,6 +23,4 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
             application-id: FJdjowTRWDa9KOeJJuLRzA-a
-            environment-id: ykwgA7IwTaQPm2i7ArvGg-e
-            plan-labels: |
-              wikipedia(en) - pcweb
+            environment-id: lykwgA7IwTaQPm2i7ArvGg-e
