@@ -24,3 +24,5 @@ jobs:
         with:
             application-id: FJdjowTRWDa9KOeJJuLRzA-a
             environment-id: ykwgA7IwTaQPm2i7ArvGg-e
+            plan-labels: |
+              wikipedia(en) - pcweb
